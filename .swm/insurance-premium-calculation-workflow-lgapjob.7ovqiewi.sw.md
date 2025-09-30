@@ -8,23 +8,27 @@ LGAPJOB performs daily insurance premium calculations by preparing input data, u
 ```mermaid
 graph TD
   
-  zclat("LGAPJOB"):::currentEntity --> 9oxx0("Calculating Enhanced Policy Premiums (LGAPDB01)")
+  zclat("LGAPJOB"):::currentEntity --> 9oxx0("Insurance Policy Processing
+and Premium Calculation")
 click 9oxx0 openDoc ".swm/insurance-policy-processing-and-premium-calculation.t96is.sw.md"
-  9oxx0("Calculating Enhanced Policy Premiums (LGAPDB01)") --> fhxms(LGAPDB02)
+9oxx0 --> fhxms(LGAPDB02)
+
 click fhxms openCode "base/src/LGAPDB02.cbl:1"
   
   
-9oxx0("Calculating Enhanced Policy Premiums (LGAPDB01)") --> s9zv9(LGAPDB03)
+9oxx0--> s9zv9(LGAPDB03)
 click s9zv9 openCode "
 base/src/LGAPDB03.cbl:1"
   
   
-9oxx0("Calculating Enhanced Policy Premiums (base/cntl/lgapjob.jcl:61)") --> 54mcs(base/src/LGAPDB04.cbl:2)
+9oxx0 --> 54mcs( base/src/LGAPDB04.cbl:2)
 click 54mcs openCode "base/src/LGAPDB04.cbl:1"
   
   
   
-zclat("LGAPJOB"):::currentEntity --> awax4("Daily Premium Summary Report Generator (base/src/LGAPRPT1.cbl:2)")
+zclat("LGAPJOB"):::currentEntity --> awax4("Daily Premium Summary
+Report Generator (base/src/LGAPRPT1.cbl:2)
+")
 click awax4 openCode "base/src/LGAPRPT1.cbl:1"
   
   
@@ -35,23 +39,27 @@ click zclat openCode "base/cntl/lgapjob.jcl:1"
 %% Swimm:
 %% graph TD
 %%   
-%%   zclat("LGAPJOB"):::currentEntity --> 9oxx0("Calculating Enhanced Policy Premiums (<SwmToken path="/base/cntl/lgapjob.jcl" pos="61:7:7" line-data="//STEP03   EXEC PGM=LGAPDB01,REGION=4M," repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB01`</SwmToken>)")
+%%   zclat("LGAPJOB"):::currentEntity --> 9oxx0("Insurance Policy Processing
+%% and Premium Calculation")
 %% click 9oxx0 openDoc ".swm/insurance-policy-processing-and-premium-calculation.t96is.sw.md"
-%%   9oxx0("Calculating Enhanced Policy Premiums (<SwmToken path="/base/cntl/lgapjob.jcl" pos="61:7:7" line-data="//STEP03   EXEC PGM=LGAPDB01,REGION=4M," repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB01`</SwmToken>)") --> fhxms(<SwmToken path="/base/src/LGAPDB02.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPDB02." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB02`</SwmToken>)
+%% 9oxx0 --> fhxms(<SwmToken path="/base/src/LGAPDB02.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPDB02." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB02`</SwmToken>)
+%% 
 %% click fhxms openCode "<SwmPath repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo" path="/base/src/LGAPDB02.cbl">`(cics-genapp-demo) base/src/LGAPDB02.cbl`</SwmPath>:1"
 %%   
 %%   
-%% 9oxx0("Calculating Enhanced Policy Premiums (<SwmToken path="/base/cntl/lgapjob.jcl" pos="61:7:7" line-data="//STEP03   EXEC PGM=LGAPDB01,REGION=4M," repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB01`</SwmToken>)") --> s9zv9(<SwmToken path="/base/src/LGAPDB03.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPDB03." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB03`</SwmToken>)
+%% 9oxx0--> s9zv9(<SwmToken path="/base/src/LGAPDB03.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPDB03." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB03`</SwmToken>)
 %% click s9zv9 openCode "
 %% <SwmPath repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo" path="/base/src/LGAPDB03.cbl">`(cics-genapp-demo) base/src/LGAPDB03.cbl`</SwmPath>:1"
 %%   
 %%   
-%% 9oxx0("Calculating Enhanced Policy Premiums (<SwmToken path="/base/cntl/lgapjob.jcl" pos="61:7:7" line-data="//STEP03   EXEC PGM=LGAPDB01,REGION=4M," repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB01`</SwmToken>)") --> 54mcs(<SwmToken path="/base/src/LGAPDB04.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPDB04." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB04`</SwmToken>)
+%% 9oxx0 --> 54mcs( <SwmToken path="/base/src/LGAPDB04.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPDB04." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB04`</SwmToken>)
 %% click 54mcs openCode "<SwmPath repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo" path="/base/src/LGAPDB04.cbl">`(cics-genapp-demo) base/src/LGAPDB04.cbl`</SwmPath>:1"
 %%   
 %%   
 %%   
-%% zclat("LGAPJOB"):::currentEntity --> awax4("Daily Premium Summary Report Generator (<SwmToken path="/base/src/LGAPRPT1.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPRPT1." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPRPT1`</SwmToken>)")
+%% zclat("LGAPJOB"):::currentEntity --> awax4("Daily Premium Summary
+%% Report Generator (<SwmToken path="/base/src/LGAPRPT1.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPRPT1." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPRPT1`</SwmToken>)
+%% ")
 %% click awax4 openCode "<SwmPath repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo" path="/base/src/LGAPRPT1.cbl">`(cics-genapp-demo) base/src/LGAPRPT1.cbl`</SwmPath>:1"
 %%   
 %%   
