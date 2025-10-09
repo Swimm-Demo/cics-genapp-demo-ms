@@ -17,18 +17,16 @@ click fhxms openCode "base/src/LGAPDB02.cbl:1"
   
   
 9oxx0--> s9zv9(LGAPDB03)
-click s9zv9 openCode "
-base/src/LGAPDB03.cbl:1"
+click s9zv9 openCode "base/src/LGAPDB03.cbl:1"
   
   
-9oxx0 --> 54mcs( base/src/LGAPDB04.cbl:2)
+9oxx0 --> 54mcs(LGAPDB04)
 click 54mcs openCode "base/src/LGAPDB04.cbl:1"
   
   
   
 zclat("LGAPJOB"):::currentEntity --> awax4("Daily Premium Summary
-Report Generator (base/src/LGAPRPT1.cbl:2)
-")
+Report Generator")
 click awax4 openCode "base/src/LGAPRPT1.cbl:1"
   
   
@@ -52,14 +50,14 @@ click zclat openCode "base/cntl/lgapjob.jcl:1"
 %% <SwmPath repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo" path="/base/src/LGAPDB03.cbl">`(cics-genapp-demo) base/src/LGAPDB03.cbl`</SwmPath>:1"
 %%   
 %%   
-%% 9oxx0 --> 54mcs( <SwmToken path="/base/src/LGAPDB04.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPDB04." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPDB04`</SwmToken>)
+%% 9oxx0 --> 54mcs(LGAPDB04)
 %% click 54mcs openCode "<SwmPath repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo" path="/base/src/LGAPDB04.cbl">`(cics-genapp-demo) base/src/LGAPDB04.cbl`</SwmPath>:1"
 %%   
 %%   
 %%   
 %% zclat("LGAPJOB"):::currentEntity --> awax4("Daily Premium Summary
-%% Report Generator (<SwmToken path="/base/src/LGAPRPT1.cbl" pos="2:6:6" line-data="       PROGRAM-ID. LGAPRPT1." repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo">`LGAPRPT1`</SwmToken>)
-%% ")
+%% Report Generator")
+%% 
 %% click awax4 openCode "<SwmPath repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo" path="/base/src/LGAPRPT1.cbl">`(cics-genapp-demo) base/src/LGAPRPT1.cbl`</SwmPath>:1"
 %%   
 %%   
@@ -414,4 +412,4 @@ BACKUP CREATED: LGAP.BACKUP.PREMIUM.G0001V00
 
 *This is an auto-generated document by Swimm 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBa3luZHJ5bC1jaWNzLWdlbmFwcCUzQSUzQVN3aW1tLURlbW8=" repo-name="kyndryl-cics-genapp"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBY2ljcy1nZW5hcHAtZGVtbyUzQSUzQXN3aW1taW8=" repo-name="cics-genapp-demo"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
